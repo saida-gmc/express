@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #222;
+  padding-bottom: 50px;
+  background-image: linear-gradient(120deg, #1c114e, #2826a0, #3e6f97);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.logo {
+  font-weight: 700;
+}
+.nav {
+  position: fixed;
+  background-color: #040403;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 15px;
+}
+.nav.active {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.nav.active a {
+  color: #000;
+}
+.nav.active .container {
+  padding: 10px 0;
+}
+.nav a.current,
+.nav a:hover {
+  color: #28acb6;
+  font-weight: bold;
+}
+.car-image {
+  background-image: url("https://wallpaperaccess.com/full/1179568.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: -2;
+}
+.car-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+.car-image h1 {
+  font-size: 45px;
+  margin: -20px 0 20px;
+}
+.car-image h4 {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+.content h1 {
+  font-size: 4rem;
+  margin: 20px 0;
+}
+.content {
+  color: rgb(0, 0, 0);
+  line-height: 30px;
+  letter-spacing: 1.2px;
+}
+.card {
+  background-color: rgba(255, 255, 255, 0.623);
+  height: 100%;
+}
+.card-body {
+  padding: 30px 15px;
+}
+.card-title,
+.icon {
+  margin-bottom: 25px;
+}
+.icon {
+  font-size: 4rem;
+}
+.footer {
+  text-align: center;
+  margin: 6rem 0 0 2rem;
+  color: rgba(168, 168, 168, 0.945);
+}
