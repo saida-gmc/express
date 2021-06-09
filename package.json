@@ -2,8 +2,9 @@
   "name": "expresscp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "indnodemon indexex.js",
   "scripts": {
+    "start": "node ./bin/www"
   },
   "author": "",
   "license": "ISC",
