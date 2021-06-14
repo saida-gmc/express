@@ -8,12 +8,17 @@ const contactRoute = require("./routes/ContactUs");
 const workingTimeRoute = require("./routes/WorkingTime");
 
 app.use(express.static(path.join(__dirname, "public", "stylesheet")));
+let date = new Date();
+let day = date.getDay();
+let hours = date.getHours();
 
-app.use(homeRoute);
-app.use(servicesRoute);
-app.use(contactRoute);
-app.use(workingTimeRoute);
-
+if (day < 6 && hours > 9 && hours < 17) {
+  app.use(homeRoute);
+  app.use(servicesRoute);
+  app.use(contactRoute);
+} else {
+  app.use(workingTimeRoute);
+}
 app.listen(5000, () => {
   console.log("server is running on port 5000");
 });
